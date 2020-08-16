@@ -46,25 +46,34 @@
             <div class="search-bar col-md-6 mx-auto">
                 <h1 class="text-center">Lyrics Search</h1>
                 <div class="search-box my-5">
-                    <input type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button class="btn btn-success search-btn">Search</button>
+                    <!-- 1.search song input id declare -->
+                    <input id="song-search" type="text" class="form-control" placeholder="Enter your artist song name">
+                    <!-- 2.search song button id declare -->
+                    <button id="song-search-btn" class="btn btn-success search-btn">Search</button>
                 </div>
             </div>
             <!-- === Simple results === -->
             <div class="d-flex justify-content-center">
                 <div class="">
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
+                    <!-- 6. 1st search found song name id and artist id declare -->
+                    <p class="author lead"><strong id="song-0-name">Purple Noon</strong> Album by <span id="song-0-artist">Washed Out</span> <button id="song-0-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-1-name">Purple Noon</strong> Album by <span id="song-1-artist">Washed Out</span> <button id="song-1-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-2-name">Purple Noon</strong> Album by <span id="song-2-artist">Washed Out</span> <button id="song-2-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-3-name">Purple Noon</strong> Album by <span id="song-3-artist">Washed Out</span> <button id="song-3-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-4-name">Purple Noon</strong> Album by <span id="song-4-artist">Washed Out</span> <button id="song-4-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-5-name">Purple Noon</strong> Album by <span id="song-5-artist">Washed Out</span> <button id="song-5-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-6-name">Purple Noon</strong> Album by <span id="song-6-artist">Washed Out</span> <button id="song-6-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-7-name">Purple Noon</strong> Album by <span id="song-7-artist">Washed Out</span> <button id="song-7-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-8-name">Purple Noon</strong> Album by <span id="song-8-artist">Washed Out</span> <button id="song-8-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-9-name">Purple Noon</strong> Album by <span id="song-9-artist">Washed Out</span> <button id="song-9-btn" class="btn btn-success">Get Lyrics</button></p>
                 </div>
             </div>
             <!-- Single Lyrics -->
             <div class="single-lyrics text-center">
                 <button class="btn go-back">&lsaquo;</button>
                 <h2 class="text-success mb-4">Pentatonix - Na Na Na</h2>
-                <pre class="lyric text-white">
+                <!-- lyrics id declare -->
+                <pre id="lyrics-show" class="lyric text-white">
     Wont go whistling like the wind blows,
     Looking out my window,
     Just to see the shine
@@ -222,5 +231,47 @@
     <!-- Custom Script Here -->
 
 </body>
+    <script>
+        // 3. song search button event listener added
+        document.getElementById("song-search-btn").addEventListener('click',function(){
+            // 4. song search field text catch
+            const searchSong = document.getElementById("song-search").value;
+            //5. api call
+            fetch(`https://api.lyrics.ovh/suggest/${searchSong}`)
+            .then( res => res.json())
+            .then( data => {
+                //7. for loop for show 10 songs name and artist
+                console.log(data.data[0]);
+                for(let i =0 ; i<10; i++){
+                    const songTitle = document.getElementById(`song-${i}-name`);
+                    songTitle.innerText = data.data[i].title;
+                    const songTitleText = songTitle.innerText;
+                    const songArtist = document.getElementById(`song-${i}-artist`);
+                    songArtist.innerText = data.data[i].artist.name;
+                    const songArtistText = songArtist.innerText;
+                    fetch(`https://api.lyrics.ovh/v1/${songArtistText}/${songTitleText}`)
+                    .then (res => res.json())
+                    .then (data => {
+                        console.log(data.lyrics);
+                    })
+                    // getLyrics(songArtistText,songTitleText);
+            
+                }
+        })    
+        })
 
+        // function getLyrics(songArtistText,songTitleText){
+        //     fetch(`https://api.lyrics.ovh/v1/${songArtistText}/${songTitleText}`)
+        //             .then (res => res.json())
+        //             .then (data => {
+        //                 console.log(data);
+        //             })
+        // }
+
+            // fetch("https://api.lyrics.ovh/v1/Samra/Mon%20Ami")
+            // .then ( res => res.json())
+            // .then ( data =>{
+            //     console.log(data.lyrics);
+            // })
+    </script>
 </html>
