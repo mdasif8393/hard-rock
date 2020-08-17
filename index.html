@@ -243,7 +243,6 @@
 
     <!-- Custom Script Here -->
 
-</body>
     <script>
         // song search button event listener added
         document.getElementById("song-search-btn").addEventListener('click',function(){
@@ -256,6 +255,7 @@
                 // for loop for show 10 songs name and artist
                 for(let i =0 ; i<10; i++){
                     const songTitle = document.getElementById(`song-${i}-name`);
+                    
                     songTitle.innerText = data.data[i].title;
                     const songTitleName = songTitle.innerText;
                     const songArtist = document.getElementById(`song-${i}-artist`);
@@ -301,6 +301,7 @@
                 }
         })    
         })
-
     </script>
+</body>
+    
 </html>
