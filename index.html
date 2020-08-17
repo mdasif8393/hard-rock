@@ -199,28 +199,34 @@
     <!-- Custom Script Here -->
 
     <script>
+        //search button event listener addd
         document.getElementById("song-search-btn").addEventListener('click',function(){
             const display = document.getElementById("content-show").style.display="block";
-            
             const searchSong = document.getElementById("song-search").value;
             
             fetch(`https://api.lyrics.ovh/suggest/${searchSong}`)
             .then( res => res.json())
             .then( data => {
                 for(let i =0 ; i<10; i++){
+                    //show song name
                     const songTitle = document.getElementById(`bonus-song-${i}-name`);
                     songTitle.innerText = data.data[i].title;
                     const songTitleName = songTitle.innerText;
+                    //show artist name
                     const songArtist = document.getElementById(`bonus-song-${i}-artist`);
                     songArtist.innerText = data.data[i].artist.name;
                     const songArtistName = songArtist.innerText;
+                    //show song link
                     const songLink = document.getElementById(`song-link-${i}`);
                     songLink.innerText=data.data[i].artist.link;
+                    //lyrics search button event listener add
                     document.getElementById(`bonus-song-${i}-btn`).addEventListener('click',function(){
+                        //call lyrics api
                         fetch(`https://api.lyrics.ovh/v1/${songArtistName}/${songTitleName}`)
                         .then (res => res.json())
                         .then (data => {
                             document.getElementById("bonus-lyrics-title").innerText = songTitleName;
+                            //show lyrics
                             document.getElementById("bonus-lyrics-show").innerText = data.lyrics;
                     })
                     })
