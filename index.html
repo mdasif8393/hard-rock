@@ -44,19 +44,19 @@
 
         <main class="content-area">
             <div class="search-bar col-md-6 mx-auto">
-                <h1 class="text-center">Lyrics Search</h1>
+                <h1 class="text-center font-color">Lyrics Search</h1>
                 <div class="search-box my-5">
                     <!-- search input id declare -->
                     <input id="song-search" type="text" class="form-control" placeholder="Enter your artist song name">
                     <!-- search song button id declare -->
-                    <button id="song-search-btn" class="btn btn-success search-btn">Search</button>
+                    <button id="song-search-btn" class="btn btn-warning search-btn">Search</button>
                 </div>
             </div>
             <!-- === Simple results === -->
             <div class="d-flex justify-content-center">
                 <div class="">
                     <!-- title id, artist id, get lyrics button id declare  -->
-                    <p class="author lead"><strong id="song-0-name">Purple Noon</strong> Album by <span id="song-0-artist">Washed Out</span> <button id="song-0-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <!-- <p class="author lead"><strong id="song-0-name">Purple Noon</strong > Album by <span id="song-0-artist">Washed Out</span> <button id="song-0-btn" class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong id="song-1-name">Purple Noon</strong> Album by <span id="song-1-artist">Washed Out</span> <button id="song-1-btn" class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong id="song-2-name">Purple Noon</strong> Album by <span id="song-2-artist">Washed Out</span> <button id="song-2-btn" class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong id="song-3-name">Purple Noon</strong> Album by <span id="song-3-artist">Washed Out</span> <button id="song-3-btn" class="btn btn-success">Get Lyrics</button></p>
@@ -65,17 +65,17 @@
                     <p class="author lead"><strong id="song-6-name">Purple Noon</strong> Album by <span id="song-6-artist">Washed Out</span> <button id="song-6-btn" class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong id="song-7-name">Purple Noon</strong> Album by <span id="song-7-artist">Washed Out</span> <button id="song-7-btn" class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong id="song-8-name">Purple Noon</strong> Album by <span id="song-8-artist">Washed Out</span> <button id="song-8-btn" class="btn btn-success">Get Lyrics</button></p>
-                    <p class="author lead"><strong id="song-9-name">Purple Noon</strong> Album by <span id="song-9-artist">Washed Out</span> <button id="song-9-btn" class="btn btn-success">Get Lyrics</button></p>
+                    <p class="author lead"><strong id="song-9-name">Purple Noon</strong> Album by <span id="song-9-artist">Washed Out</span> <button id="song-9-btn" class="btn btn-success">Get Lyrics</button></p> -->
                 </div>
             </div>
             <!-- Single Lyrics -->
             <div class="single-lyrics text-center">
                 <button class="btn go-back">&lsaquo;</button>
                 <!-- song title id declare -->
-                <h2 id="lyrics-title" class="text-success mb-4">Pentatonix - Na Na Na</h2>
+                <!-- <h2 id="lyrics-title" class="text-success mb-4">Pentatonix - Na Na Na</h2> -->
                 <!-- song lyrics id declare -->
                 <pre id="lyrics-show" class="lyric text-white">
-    Wont go whistling like the wind blows,
+    <!-- Wont go whistling like the wind blows,
     Looking out my window,
     Just to see the shine
     Maybe you might call it crazy,
@@ -167,21 +167,21 @@
 
     Sing it loud like! (Na na na...)
 
-    Gonna feel like! (Na na na...)
+    Gonna feel like! (Na na na...) -->
                 </pre>
             </div>
             <!-- === Fancy results === -->
-            <div class="search-result col-md-8 mx-auto py-4">
+            <div id="content-show" class="search-result col-md-8 mx-auto py-4 ">
                 <!-- single result -->
                 <!-- bonus section song title, song artist, song link, get lyrics id declare -->
                 <div class="single-result row align-items-center my-3 p-3">
                     <div class="col-md-9">
-                        <h3 id="bonus-song-0-name" class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span id="bonus-song-0-artist">Washed Out</span></p>
-                        <p class="author lead">Song Link: <span id="song-link-0">http://www.deezer.com/artist/121584</span></p>
+                        <h3  class="lyrics-name">Song Name: <span id="bonus-song-0-name" class="font-color"> Purple Noon</span> </h3>
+                        <p class="author lead">Album by: <span id="bonus-song-0-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-0" class="font-color">http://www.deezer.com/artist/121584</span></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
-                        <button id="bonus-song-0-btn" class="btn btn-success">Get Lyrics</button>
+                        <button id="bonus-song-0-btn" class="btn btn-warning">Get Lyrics</button>
                     </div>
                 </div>
                 <!-- ./ single result -->
@@ -189,46 +189,121 @@
                 <!-- single result -->
                 <div class="single-result row align-items-center my-3 p-3">
                     <div class="col-md-9">
-                        <h3 id="bonus-song-1-name" class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span id="bonus-song-1-artist">Washed Out</span></p>
-                        <p class="author lead">Song Link: <span id="song-link-1">http://www.deezer.com/artist/121584</span></p>
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-1-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-1-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-1" class="font-color">http://www.deezer.com/artist/121584</span></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
-                        <button id="bonus-song-1-btn" class="btn btn-success">Get Lyrics</button>
+                        <button id="bonus-song-1-btn" class="btn btn-warning">Get Lyrics</button>
                     </div>
                 </div>
                 <!-- ./ single result -->
                 <!-- single result -->
                 <div class="single-result row align-items-center my-3 p-3">
                     <div class="col-md-9">
-                        <h3 id="bonus-song-2-name" class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span id="bonus-song-2-artist">Washed Out</span></p>
-                        <p class="author lead">Song Link: <span id="song-link-2">http://www.deezer.com/artist/121584</span></p>
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-2-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-2-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-2" class="font-color">http://www.deezer.com/artist/121584</span></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
-                        <button id="bonus-song-2-btn" class="btn btn-success">Get Lyrics</button>
+                        <button id="bonus-song-2-btn" class="btn btn-warning">Get Lyrics</button>
                     </div>
                 </div>
                 <!-- ./ single result -->
                 <!-- single result -->
                 <div class="single-result row align-items-center my-3 p-3">
                     <div class="col-md-9">
-                        <h3 id="bonus-song-3-name" class="lyrics-name">Purple Noon</h3>
-                        <p class="author lead">Album by <span id="bonus-song-3-artist">Washed Out</span></p>
-                        <p class="author lead">Song Link: <span id="song-link-3">http://www.deezer.com/artist/121584</span></p>
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-3-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-3-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-3" class="font-color">http://www.deezer.com/artist/121584</span></p>
                     </div>
                     <div class="col-md-3 text-md-right text-center">
-                        <button id="bonus-song-3-btn" class="btn btn-success">Get Lyrics</button>
+                        <button id="bonus-song-3-btn" class="btn btn-warning">Get Lyrics</button>
+                    </div>
+                </div>
+
+                <!-- ./ single result -->
+                <!-- single result -->
+                <div class="single-result row align-items-center my-3 p-3">
+                    <div class="col-md-9">
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-4-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-4-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-4" class="font-color">http://www.deezer.com/artist/121584</span></p>
+                    </div>
+                    <div class="col-md-3 text-md-right text-center">
+                        <button id="bonus-song-4-btn" class="btn btn-warning">Get Lyrics</button>
+                    </div>
+                </div>
+
+                 <!-- ./ single result -->
+                <!-- single result -->
+                <div class="single-result row align-items-center my-3 p-3">
+                    <div class="col-md-9">
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-5-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-5-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-5" class="font-color">http://www.deezer.com/artist/121584</span></p>
+                    </div>
+                    <div class="col-md-3 text-md-right text-center">
+                        <button id="bonus-song-5-btn" class="btn btn-warning">Get Lyrics</button>
+                    </div>
+                </div>
+
+                <!-- ./ single result -->
+                <!-- single result -->
+                <div class="single-result row align-items-center my-3 p-3">
+                    <div class="col-md-9">
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-6-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-6-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-6" class="font-color">http://www.deezer.com/artist/121584</span></p>
+                    </div>
+                    <div class="col-md-3 text-md-right text-center">
+                        <button id="bonus-song-6-btn" class="btn btn-warning">Get Lyrics</button>
+                    </div>
+                </div>
+
+                <!-- ./ single result -->
+                <!-- single result -->
+                <div class="single-result row align-items-center my-3 p-3">
+                    <div class="col-md-9">
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-7-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-7-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-7" class="font-color">http://www.deezer.com/artist/121584</span></p>
+                    </div>
+                    <div class="col-md-3 text-md-right text-center">
+                        <button id="bonus-song-7-btn" class="btn btn-warning">Get Lyrics</button>
+                    </div>
+                </div>
+
+                <div class="single-result row align-items-center my-3 p-3">
+                    <div class="col-md-9">
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-8-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-8-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-8" class="font-color">http://www.deezer.com/artist/121584</span></p>
+                    </div>
+                    <div class="col-md-3 text-md-right text-center">
+                        <button id="bonus-song-8-btn" class="btn btn-warning">Get Lyrics</button>
+                    </div>
+                </div>
+
+                <div class="single-result row align-items-center my-3 p-3">
+                    <div class="col-md-9">
+                        <h3 class="lyrics-name">Song Name: <span id="bonus-song-9-name" class="font-color">Purple Noon</span></h3>
+                        <p class="author lead">Album by: <span id="bonus-song-9-artist" class="font-color">Washed Out</span></p>
+                        <p class="author lead">Song Link: <span id="song-link-9" class="font-color">http://www.deezer.com/artist/121584</span></p>
+                    </div>
+                    <div class="col-md-3 text-md-right text-center">
+                        <button id="bonus-song-9-btn" class="btn btn-warning">Get Lyrics</button>
                     </div>
                 </div>
                 <!-- bonus part song name show and lyrics show id declare -->
                 <div class="single-lyrics text-center">
                     <button class="btn go-back">&lsaquo;</button>
-                    <h2 id="bonus-lyrics-title" class="text-success mb-4"></h2>
-                    <pre id="bonus-lyrics-show" class="lyric text-white">
+                    <h2 id="bonus-lyrics-title" class="text-warning mb-4 "></h2>
+                    <pre id="bonus-lyrics-show" class="lyric font-color ">
         
                     </pre>
                 </div>
+                
             </div>
 
 
@@ -245,43 +320,46 @@
 
     <script>
         // song search button event listener added
-        document.getElementById("song-search-btn").addEventListener('click',function(){
+        //document.getElementById("song-search-btn").addEventListener('click',function(){
             //  song search field text catch
-            const searchSong = document.getElementById("song-search").value;
+            //const searchSong = document.getElementById("song-search").value;
             // api call
-            fetch(`https://api.lyrics.ovh/suggest/${searchSong}`)
-            .then( res => res.json())
-            .then( data => {
+            //fetch(`https://api.lyrics.ovh/suggest/${searchSong}`)
+            //.then( res => res.json())
+            //.then( data => {
                 // for loop for show 10 songs name and artist
-                for(let i =0 ; i<10; i++){
-                    const songTitle = document.getElementById(`song-${i}-name`);
+               // for(let i =0 ; i<10; i++){
+                   // const songTitle = document.getElementById(`song-${i}-name`);
                     
-                    songTitle.innerText = data.data[i].title;
-                    const songTitleName = songTitle.innerText;
-                    const songArtist = document.getElementById(`song-${i}-artist`);
-                    songArtist.innerText = data.data[i].artist.name;
-                    const songArtistName = songArtist.innerText;
-                    document.getElementById(`song-${i}-btn`).addEventListener('click',function(){
-                        fetch(`https://api.lyrics.ovh/v1/${songArtistName}/${songTitleName}`)
-                        .then (res => res.json())
-                        .then (data => {
-                            document.getElementById("lyrics-title").innerText = songTitleName;
-                            document.getElementById("lyrics-show").innerText = data.lyrics;
-                    })
-                    })
-                }
-        })    
-        })
+                   // songTitle.innerText = data.data[i].title;
+                    //const songTitleName = songTitle.innerText;
+                    //const songArtist = document.getElementById(`song-${i}-artist`);
+                    //songArtist.innerText = data.data[i].artist.name;
+                    //const songArtistName = songArtist.innerText;
+                    //document.getElementById(`song-${i}-btn`).addEventListener('click',function(){
+                       // fetch(`https://api.lyrics.ovh/v1/${songArtistName}/${songTitleName}`)
+                        //.then (res => res.json())
+                        //.then (data => {
+                        //    document.getElementById("lyrics-title").innerText = songTitleName;
+                         //   document.getElementById("lyrics-show").innerText = data.lyrics;
+                         //   const lyrics = document.getElementById("lyrics-show").innerText = data.lyrics;
+                         //   console.log(lyrics);
+               //     })
+                //    })
+            //    }
+     //   })    
+     //   })
 
         //bonus section javascript
         document.getElementById("song-search-btn").addEventListener('click',function(){
+            const display = document.getElementById("content-show").style.display="block";
             
             const searchSong = document.getElementById("song-search").value;
             
             fetch(`https://api.lyrics.ovh/suggest/${searchSong}`)
             .then( res => res.json())
             .then( data => {
-                for(let i =0 ; i<4; i++){
+                for(let i =0 ; i<10; i++){
                     const songTitle = document.getElementById(`bonus-song-${i}-name`);
                     songTitle.innerText = data.data[i].title;
                     const songTitleName = songTitle.innerText;
