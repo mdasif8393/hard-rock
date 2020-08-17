@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
+    <!-- Faviconn -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -52,27 +52,11 @@
                     <button id="song-search-btn" class="btn btn-warning search-btn">Search</button>
                 </div>
             </div>
-            <!-- === Simple results === -->
-            <div class="d-flex justify-content-center">
-                <div class="">
-                    <!-- title id, artist id, get lyrics button id declare  -->
-                    
-                </div>
-            </div>
-            <!-- Single Lyrics -->
-            <div class="single-lyrics text-center">
-                <button class="btn go-back">&lsaquo;</button>
-                <!-- song title id declare -->
-                <!-- <h2 id="lyrics-title" class="text-success mb-4">Pentatonix - Na Na Na</h2> -->
-                <!-- song lyrics id declare -->
-                <pre id="lyrics-show" class="lyric text-white">
-    
-                </pre>
-            </div>
+            
             <!-- === Fancy results === -->
             <div id="content-show" class="search-result col-md-8 mx-auto py-4 ">
                 <!-- single result -->
-                <!-- bonus section song title, song artist, song link, get lyrics id declare -->
+                <!--  song title, song artist, song link, get lyrics id declare -->
                 <div class="single-result row align-items-center my-3 p-3">
                     <div class="col-md-9">
                         <h3  class="lyrics-name">Song Name: <span id="bonus-song-0-name" class="font-color"> Purple Noon</span> </h3>
@@ -204,9 +188,6 @@
                 </div>
                 
             </div>
-
-
-
         </main>
     </div>
     <!-- Optional JavaScript -->
@@ -218,38 +199,6 @@
     <!-- Custom Script Here -->
 
     <script>
-        // song search button event listener added
-        //document.getElementById("song-search-btn").addEventListener('click',function(){
-            //  song search field text catch
-            //const searchSong = document.getElementById("song-search").value;
-            // api call
-            //fetch(`https://api.lyrics.ovh/suggest/${searchSong}`)
-            //.then( res => res.json())
-            //.then( data => {
-                // for loop for show 10 songs name and artist
-               // for(let i =0 ; i<10; i++){
-                   // const songTitle = document.getElementById(`song-${i}-name`);
-                    
-                   // songTitle.innerText = data.data[i].title;
-                    //const songTitleName = songTitle.innerText;
-                    //const songArtist = document.getElementById(`song-${i}-artist`);
-                    //songArtist.innerText = data.data[i].artist.name;
-                    //const songArtistName = songArtist.innerText;
-                    //document.getElementById(`song-${i}-btn`).addEventListener('click',function(){
-                       // fetch(`https://api.lyrics.ovh/v1/${songArtistName}/${songTitleName}`)
-                        //.then (res => res.json())
-                        //.then (data => {
-                        //    document.getElementById("lyrics-title").innerText = songTitleName;
-                         //   document.getElementById("lyrics-show").innerText = data.lyrics;
-                         //   const lyrics = document.getElementById("lyrics-show").innerText = data.lyrics;
-                         //   console.log(lyrics);
-               //     })
-                //    })
-            //    }
-     //   })    
-     //   })
-
-        //bonus section javascript
         document.getElementById("song-search-btn").addEventListener('click',function(){
             const display = document.getElementById("content-show").style.display="block";
             
