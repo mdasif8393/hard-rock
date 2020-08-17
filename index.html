@@ -244,34 +244,24 @@
                 console.log(data.data[0]);
                 for(let i =0 ; i<10; i++){
                     const songTitle = document.getElementById(`song-${i}-name`);
+                    
                     songTitle.innerText = data.data[i].title;
-                    const songTitleText = songTitle.innerText;
+                    const songTitleName = songTitle.innerText;
                     const songArtist = document.getElementById(`song-${i}-artist`);
                     songArtist.innerText = data.data[i].artist.name;
-                    const songArtistText = songArtist.innerText;
-                    fetch(`https://api.lyrics.ovh/v1/${songArtistText}/${songTitleText}`)
-                    .then (res => res.json())
-                    .then (data => {
-                        console.log(data.lyrics);
+                    const songArtistName = songArtist.innerText;
+                    document.getElementById(`song-${i}-btn`).addEventListener('click',function(){
+                        fetch(`https://api.lyrics.ovh/v1/${songArtistName}/${songTitleName}`)
+                        .then (res => res.json())
+                        .then (data => {
+                            document.getElementById("lyrics-show").innerText = data.lyrics;
+                            
                     })
-                    // getLyrics(songArtistText,songTitleText);
-            
+                    })
                 }
         })    
         })
 
-        // function getLyrics(songArtistText,songTitleText){
-        //     fetch(`https://api.lyrics.ovh/v1/${songArtistText}/${songTitleText}`)
-        //             .then (res => res.json())
-        //             .then (data => {
-        //                 console.log(data);
-        //             })
-        // }
-
-            // fetch("https://api.lyrics.ovh/v1/Samra/Mon%20Ami")
-            // .then ( res => res.json())
-            // .then ( data =>{
-            //     console.log(data.lyrics);
-            // })
+        
     </script>
 </html>
